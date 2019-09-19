@@ -39,3 +39,37 @@
 		job_master.EquipRank(src, "Nitohei")
 		spawn (50) // must be here or they won't spawn, it seems - Kachnov
 			death()
+
+/mob/living/carbon/human/corpse/civ
+	gender = MALE
+
+/mob/living/carbon/human/corpse/civ/New()
+	..()
+	icon_state = "body_m_s"
+	var/spawntime = 0
+	if (!job_master)
+		spawntime = 300
+	spawn (spawntime)
+		if (!job_master)
+			qdel(src)
+			return
+		job_master.EquipRank(src, "Civilian")
+		spawn (50) // must be here or they won't spawn, it seems - Kachnov
+			death()
+
+/mob/living/carbon/human/corpse/civ/jew
+	gender = MALE
+
+/mob/living/carbon/human/corpse/civ/jew/New()
+	..()
+	icon_state = "body_m_s"
+	var/spawntime = 0
+	if (!job_master)
+		spawntime = 300
+	spawn (spawntime)
+		if (!job_master)
+			qdel(src)
+			return
+		job_master.EquipRank(src, "Rich Banker")
+		spawn (50) // must be here or they won't spawn, it seems - Kachnov
+			death()
