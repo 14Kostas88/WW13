@@ -83,7 +83,8 @@ WW 2 WEAPONS MAGS N AMMO
 
 /obj/item/ammo_magazine/c762x63
 	name = "Clip (30-06), 8 rds."
-	icon_state = "clip"
+	icon_state = "gclip"
+	mag_type = MAGAZINE
 	caliber = "c762x63"
 	matter = list(DEFAULT_WALL_MATERIAL = 360)
 	ammo_type = /obj/item/ammo_casing/c762x63
@@ -382,7 +383,7 @@ OTHER
 	caliber = "a762x25"
 	max_ammo = 71
 	multiple_sprites = TRUE
-	weight = 2.41
+	weight = 2
 
 /obj/item/ammo_magazine/a556/empty
 	initial_ammo = FALSE

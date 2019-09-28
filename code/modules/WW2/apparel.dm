@@ -147,6 +147,13 @@
 	item_state = "germanfirefighteruniform"
 	worn_state = "germanfirefighteruniform"
 
+/obj/item/clothing/under/reporter
+	name = "War Correspondants's uniform"
+	desc = "A fancier, more pressed uniform."
+	icon_state = "Germanwarcorrespondantuniform"
+	item_state = "Germanwarcorrespondantuniform"
+	worn_state = "Germanwarcorrespondantuniform"
+
 
 /obj/item/clothing/under/firefighteroff
 	name = "firefighter's uniform"
@@ -558,7 +565,6 @@
 	desc = "A standard IJA helmet."
 	icon_state = "japhelm"
 	item_state = "japhelm"
-	flags_inv = BLOCKHEADHAIR
 
 /obj/item/clothing/head/helmet/japhelm/attackby(obj/item/W as obj, mob/user as mob)
 	if (!istype(W)) return//I really don't understand why this check is needed
@@ -575,7 +581,6 @@
 	icon_state = "japhelm_bandana"
 	item_state = "japhelm_bandana"
 	worn_state = "japhelm_bandana"
-	flags_inv = BLOCKHEADHAIR
 
 /obj/item/clothing/head/jap_headband
 	name = "Japanese Headband"
@@ -641,7 +646,7 @@
 /obj/item/clothing/head/helmet/japoffcap/verb/toggle_flaps()
 	set category = null
 	set src in usr
-	if (type != /obj/item/clothing/head/helmet/japncohat)
+	if (type != /obj/item/clothing/head/helmet/japoffcap)
 		return
 	else
 		if (toggled)
@@ -1187,24 +1192,36 @@
 	desc = "You wear this on your back and put items into it."
 	icon_state = "germanpack"
 	item_state_slots = null
+	slowdown = 0.5
 
 /obj/item/weapon/storage/backpack/italy
 	name = "italian backpack"
 	desc = "You wear this on your back and put items into it."
 	icon_state = "germanpack"
 	item_state_slots = null
+	slowdown = 0.5
 
 /obj/item/weapon/storage/backpack/japan
 	name = "japanese backpack"
 	desc = "You wear this on your back and put items into it."
 	icon_state = "jappack"
 	item_state_slots = null
+	slowdown = 0.5
 
 /obj/item/weapon/storage/backpack/usa
 	name = "american backpack"
 	desc = "You wear this on your back and put items into it."
 	icon_state = "uspack"
 	item_state_slots = null
+	slowdown = 0.5
+
+/obj/item/weapon/storage/backpack/usafield
+	name = "american field pack"
+	desc = "You wear this on your back and put items into it."
+	icon_state = "usfieldpack"
+	item_state_slots = null
+	slowdown = 0.1
+	max_storage_space = 11
 
 //portable rations
 
@@ -1234,6 +1251,7 @@
 	desc = "You wear this on your back and put items into it."
 	icon_state = "russianpack"
 	item_state_slots = null
+	slowdown = 0.5
 
 // coats
 
@@ -1292,6 +1310,14 @@
 	icon_state = "nazimp_coat"
 	item_state = "nazimp_coat"
 	worn_state = "nazimp_coat"
+
+
+/obj/item/clothing/suit/storage/coat/hugoboss
+	name = "Hugo Boss Coat"
+	desc = "An ordinary winter coat, the same style der fuhrer wore himself."
+	icon_state = "hugo"
+	item_state = "hugo"
+	worn_state = "hugo"
 
 /obj/item/clothing/suit/storage/coat/soviet
 	name = "Soviet Soldier's Coat"

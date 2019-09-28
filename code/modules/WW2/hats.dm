@@ -38,6 +38,11 @@
 		item_state = "afgerofficercap"
 		worn_state = "afgerofficercap"
 
+/obj/item/clothing/head/caphat/ssofficercap
+	name = "SS commanding officer cap"
+	icon_state = "sscap"
+	item_state = "sscap"
+
 /obj/item/clothing/head/caphat/gercap/fieldcap
 	name = "German officer cap"
 	icon_state = "fieldcap"
@@ -63,6 +68,11 @@
 	name = "Kriegsmarine Cap"
 	icon_state = "km_cap"
 	item_state = "km_cap"
+
+/obj/item/clothing/head/caphat/reporter
+	name = "War Correspondant Cap"
+	icon_state = "germanwarcorrespondanthat"
+	item_state = "germanwarcorrespondanthat"
 
 /obj/item/clothing/head/caphat/nsdap_cap
 	name = "NSDAP Cap"
